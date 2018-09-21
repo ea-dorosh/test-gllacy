@@ -50,14 +50,25 @@ img {
     font-size: 18px;
     line-height: 24px;
     font-weight: bold;
-    background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+    background-image: linear-gradient( 90deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
     box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
     color: #ffffff;
-    padding: 10px 10px 10px 22px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-radius: 25px;
+    text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
 }
 
+.btn-small:hover {
+    background: #f17d65;
+    box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.004);
+}
 
+.btn-small:active {
+    background-image: linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+    box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
+
+}
 
 /* стили для блока Promotions */
 
@@ -103,6 +114,7 @@ img {
     margin-left: 234px;
     margin-top: 8px;
     margin-bottom: 24px;
+    padding-left: 22px;
 }
 
 .promotions-chocolate {
@@ -139,4 +151,96 @@ img {
     margin-left: 210px;
     margin-top: 8px;
     margin-bottom: 24px;
+    padding-left: 22px;
+}
+
+/* стили для блока popular-catalog */
+
+.popular-catalog-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.popular-catalog-item {
+    position: relative;
+    width: 200px;
+}
+
+.popular-catalog-item:hover a {
+    display: block;
+}
+.flag-hit {
+    font-size: 0;
+    background: url(../img/svg/hit.svg) no-repeat;
+    position: absolute;
+    width: 61px;
+    height: 61px;
+    top: 0px;
+    left: 0px;
+}
+
+.popular-catalog-item img{
+    border-radius: 50%;
+}
+
+.popular-catalog-price {
+    position: absolute;
+    width: 81px;
+    height: 36px;
+    top: 140px;
+    left: -2px;
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+.popular-catalog-price::after {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 37px;
+    left: 81px;
+    top: 5px;
+    background-image: url(../img/svg/ruble.svg);
+}
+
+.popular-catalog-unit {
+    position: absolute;
+    width: 43px;
+    height: 27px;
+    top: 145px;
+    left: 111px;
+    font-size: 30px;
+    line-height: 45px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+.popular-catalog-item h3 {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    text-decoration: underline;
+    padding-left: 9px;
+    padding-right: 9px;
+    margin-top: 7px;
+    text-align: center;
+}
+
+.popular-catalog-item a {
+    display: none;
+    width: 195px;
+    padding-left: 14px;
+    padding-right: 10px;
 }
