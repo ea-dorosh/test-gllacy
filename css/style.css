@@ -163,24 +163,32 @@ img {
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-top: 40px;
+    margin-top: 31px;
 }
 
 .popular-catalog-item {
     position: relative;
     width: 200px;
+    padding-top: 9px;
+    border-radius: 5px;
 }
 
 .popular-catalog-item:hover a {
     display: block;
 }
+
+.popular-catalog-item:hover {
+    min-height: 366px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 .flag-hit {
     font-size: 0;
     background: url(../img/svg/hit.svg) no-repeat;
     position: absolute;
     width: 61px;
     height: 61px;
-    top: 0px;
+    top: 9px;
     left: 0px;
 }
 
@@ -192,8 +200,8 @@ img {
     position: absolute;
     width: 81px;
     height: 36px;
-    top: 140px;
-    left: -2px;
+    top: 149px;
+    left: 0px;
     font-size: 45px;
     line-height: 45px;
     font-weight: bold;
@@ -215,7 +223,7 @@ img {
     position: absolute;
     width: 43px;
     height: 27px;
-    top: 145px;
+    top: 154px;
     left: 111px;
     font-size: 30px;
     line-height: 45px;
@@ -236,11 +244,100 @@ img {
     padding-right: 9px;
     margin-top: 7px;
     text-align: center;
+    min-height: 88px;
 }
 
 .popular-catalog-item a {
     display: none;
-    width: 195px;
+    width: 194px;
     padding-left: 14px;
     padding-right: 10px;
+    margin-left: 3px;
+}
+
+/* стили для блока advantages */
+
+.advantages {
+    background-image: url(../img/waffle.jpg);
+    margin-top: 15px;
+    border-radius: 15px;
+}
+
+.advantages h2 {
+    color: #323232;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    margin: 0;
+    padding-left: 19px;
+    padding-top: 25px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.advantages ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding-bottom: 13px;
+}
+
+.advantages-item {
+    width: 420px;
+    margin: 0;
+    padding: 0;
+    color: #323232;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.advantages-item p {
+    margin: 0;
+    padding-left: 76px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-right: 1px;
+}
+
+.advantages-item:nth-child(1)::before {
+    content: "";
+    width: 49px;
+    height: 49px;
+    left: 20px;
+    top: -2px;
+    position: absolute;
+    background: url("../img/svg/ice-cream.svg")
+}
+
+.advantages-item:nth-child(2)::before {
+    content: "";
+    width: 49px;
+    height: 49px;
+    left: 439px;
+    top: -2px;
+    position: absolute;
+    background: url("../img/svg/cow.svg")
+}
+
+.advantages-item:nth-child(3)::before {
+    content: "";
+    width: 49px;
+    height: 49px;
+    left: 20px;
+    top: 131px;
+    position: absolute;
+    background: url("../img/svg/eco.svg")
+}
+
+.advantages-item:nth-child(4)::before {
+    content: "";
+    width: 49px;
+    height: 49px;
+    left: 439px;
+    top: 131px;
+    position: absolute;
+    background: url("../img/svg/thermometer.svg")
 }
