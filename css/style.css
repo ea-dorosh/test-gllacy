@@ -140,6 +140,7 @@ img {
 .site-navigation > li > a:hover {
     background-color: #f7f6f3;
     color: #000000;
+    text-decoration: none;
 }
 
 .site-navigation > li > a:active {
@@ -187,6 +188,7 @@ img {
     background-color: #f8f7f4;
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
     border-radius: 5px;
+    z-index: 10;
 }
 
 .user-navigation {
@@ -250,7 +252,7 @@ img {
     fill: #000000;
 }
 
-.cart-link {
+.cart-link-empty {
     display: block;
     position: relative;
     border-radius: 50px;
@@ -265,23 +267,23 @@ img {
     margin-left: 9px;
 }
 
-.cart-link svg {
+.cart-link-empty svg {
     position: absolute;
     left: 16px;
     top: 6px;
 }
 
-.cart-link path {
+.cart-link-empty path {
     fill: #ffffff;
 }
 
-.cart-link:hover {
+.cart-link-empty:hover {
     background-color: #ffffff;
     color: #000000;
 }
 
-.cart-link:hover path,
-.cart-link:hover circle {
+.cart-link-empty:hover path,
+.cart-link-empty:hover circle {
     fill: #000000;
 }
 
@@ -512,6 +514,7 @@ img {
 .popular-catalog-item:hover {
     min-height: 366px;
     background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
 .flag-hit {
@@ -986,7 +989,450 @@ li.favorite::before {
     color: #ffbc9e;
 }
 
-/* стили для модолок */
+/*|||||||||| стили для страницы каталога ||||||||||||||*/
+
+.body-catalog {
+    background-color: #849d8f;
+    background-image: url(../img/background-light.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.body-catalog main {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/*|||||| стили для страницы каталога ХЕДЕР ||||||*/
+
+.cart-link-full {
+    display: block;
+    position: relative;
+    border-radius: 50px;
+    background-color: #ffffff;
+    padding-top: 7px;
+    padding-bottom: 9px;
+    padding-left: 45px;
+    padding-right: 17px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #323232;
+    margin-left: 9px;
+}
+
+.cart-link-full svg {
+    position: absolute;
+    left: 16px;
+    top: 6px;
+}
+
+.cart-link-full:hover {
+
+}
+
+.site-navigation .active-page {
+    background-color: #d07058;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/*|||||| стили для страницы каталога Main||||||*/
+
+.bread-crumbs {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: -19px;
+    margin-bottom: 5px;
+}
+
+.bread-crumbs a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.bread-crumbs a:hover {
+    color: #ffbc9e;
+}
+
+.bread-crumbs li {
+    position: relative;
+    padding-right: 21px;
+}
+
+.icon-right::after {
+    content: "»";
+    position: absolute;
+    margin-left: 7px;
+}
+
+.catalog-title {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-size: 35px;
+    line-height: 41px;
+}
+
+/*|||||| стили для страницы каталога Фильтр ||||||*/
+
+.catalog-form {
+    margin-top: 10px;
+}
+
+.catalog-form .catalog-form-top {
+    display: flex;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.catalog-form-item {
+    margin-right: 13px;
+}
+
+.catalog-form-item p {
+    margin: 0;
+    margin-left: 16px;
+    margin-top: 15px;
+    margin-bottom: 6px;
+}
+
+.catalog-form-item select {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 194px;
+    border-radius: 30px;
+    -webkit-appearance: none;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 9px 14px;
+    border: none;
+}
+
+.catalog-form-item .range-filter {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 220px;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 16px 14px;
+    border: none;
+}
+
+.range-controls {
+	position: relative;
+}
+
+.range-controls .scale {
+    margin-left: 10px;
+    width: 175px;
+	height: 4px;
+	background: #cbd4cd;
+}
+
+.range-controls .bar {
+    margin-left: 20px;
+	width: 60%;
+	height: 4px;
+	background: #f8f7f4;
+}
+
+.range-controls .toggle {
+	position: absolute;
+	top: -8px;
+	left: 0;
+	width: 20px;
+	height: 23px;
+	padding: 0;
+	background-image: url(../img/svg/filter-button.svg);
+	cursor: pointer;
+}
+
+.range-controls .toggle-min {
+	left: 22px;
+}
+
+.range-controls .toggle-max {
+	left: 120px;
+}
+
+.radio-wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 415px;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 9px 14px;
+    padding-left: 48px;
+    border: none;
+}
+
+.filter-option {
+	position: relative;
+}
+
+.filter-radio input[type="radio"] + .radio-indicator {
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	top: -2px;
+	left: -30px;
+	background-image: url(../img/svg/radio-off.svg);
+    background-size: 100%;
+	background-repeat: no-repeat;
+	opacity: 0.8;
+}
+
+.filter-radio input[type="radio"]:hover + .radio-indicator,
+.filter-radio input[type="radio"]:focus + .radio-indicator {
+	opacity: 1;
+}
+
+.filter-radio input[type="radio"]:checked + .radio-indicator::after {
+	content: "";
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	background-image: url(../img/svg/radio-on.svg);
+	background-repeat: no-repeat;
+    background-size: 100%;
+	opacity: 0.8;
+}
+
+.filter-radio input[type="radio"]:checked:hover + .radio-indicator::after {
+	opacity: 1;
+}
+
+.filter-radio input[type="radio"]:disabled + .radio-indicator {
+	opacity: 0.4;
+}
+
+.catalog-form .catalog-form-bottom {
+    display: flex;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 1px;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 703px;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 18px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-right: 19px;
+    padding-left: 48px;
+    border: none;
+}
+
+.filter-checkbox input[type="checkbox"] + .checkbox-indicator {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: -2px;
+	left: -34px;
+	background-image: url(../img//svg/checkbox-off.svg);
+	background-repeat: no-repeat;
+    background-size: 100%;
+	opacity: 0.8;
+}
+
+.filter-checkbox input[type="checkbox"]:hover + .checkbox-indicator,
+.filter-checkbox input[type="checkbox"]:focus + .checkbox-indicator {
+	opacity: 1;
+}
+
+.filter-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+	content: "";
+	position: absolute;
+	width: 24px;
+	height: 20px;
+	background-image: url(../img/svg/checkbox-on.svg);
+    background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.filter-checkbox input[type="checkbox"]:disabled + .checkbox-indicator {
+	opacity: 0.4;
+}
+
+.catalog-form-button {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 8px 14px;
+    border: 2px solid #fbfcfb;
+    height: 35px;
+    margin: 36px 1px;
+    width: 142px;
+}
+
+/*|||||| стили для страницы каталога icecream-catalog ||||||*/
+
+
+.icecream-catalog-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: -4px;
+}
+
+.icecream-catalog-item {
+    position: relative;
+    width: 200px;
+    padding-top: 12px;
+    border-radius: 5px;
+}
+
+.icecream-catalog-item:hover a {
+    display: block;
+}
+
+.icecream-catalog-item:hover {
+    min-height: 366px;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+
+
+.icecream-catalog-item img{
+    border-radius: 50%;
+}
+
+.icecream-catalog-price {
+    position: absolute;
+    width: 81px;
+    height: 36px;
+    top: 149px;
+    left: 0px;
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+.icecream-catalog-price::after {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 37px;
+    left: 81px;
+    top: 5px;
+    background-image: url(../img/svg/ruble.svg);
+}
+
+.icecream-catalog-unit {
+    position: absolute;
+    width: 43px;
+    height: 27px;
+    top: 154px;
+    left: 111px;
+    font-size: 30px;
+    line-height: 45px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+.icecream-catalog-item h3 {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    text-decoration: underline;
+    padding-left: 9px;
+    padding-right: 9px;
+    margin-top: 7px;
+    text-align: center;
+    min-height: 88px;
+}
+
+.icecream-catalog-item a {
+    display: none;
+    width: 194px;
+    padding-left: 14px;
+    padding-right: 10px;
+    margin-left: 3px;
+}
+
+/*|||||| стили для страницы каталога pagination |||||*/
+
+.pagination-list {
+    position: relative;
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    margin: 0;
+    margin-top: 39px;
+    margin-bottom: 30px;
+}
+
+.pagination-item {
+    border-radius: 50%;
+    margin-left: 3px;
+    width: 26px;
+    height: 26px;
+
+}
+
+.pagination-item a {
+    display: block;
+    color: #ffffff;
+    padding-top: 3px;
+    padding-left: 8px;
+}
+
+.pagination-item-current {
+    background-color: #ffffff;
+}
+
+.pagination-item-current a {
+    color: #000000;
+}
+
+.pagination-item-back {
+    transform: rotate(180deg);
+    padding: 2px 14px;
+}
+
+.pagination-item-back path {
+    fill: rgba(255, 255, 255, 0.2);
+}
+
+.pagination-item-next {
+    padding-top: 3px;
+    padding-left: 16px;
+}
+
+.pagination-item-next path {
+    fill: rgba(255, 255, 255, 1.0);
+}
+
+
+    /* стили для модолок */
 
 .modal {
     position: fixed;
