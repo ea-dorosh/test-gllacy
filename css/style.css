@@ -1405,6 +1405,14 @@ li.favorite::before {
     padding-left: 8px;
 }
 
+.pagination-item:hover {
+    background-color: #ffffff;
+}
+
+.pagination-item:hover a {
+    color: #000000;
+}
+
 .pagination-item-current {
     background-color: #ffffff;
 }
