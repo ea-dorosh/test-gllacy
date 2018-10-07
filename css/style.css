@@ -1113,6 +1113,10 @@ li.favorite::before {
     border: none;
 }
 
+.catalog-form-item select:hover {
+    color: #323232;
+}
+
 .catalog-form-item .range-filter {
     background-color: rgba(255, 255, 255, 0.2);
     width: 220px;
@@ -1283,6 +1287,17 @@ li.favorite::before {
     width: 142px;
 }
 
+.catalog-form-button:hover {
+    background-color: #fbfcfb;
+    color: #323232;
+}
+
+.catalog-form-button:active {
+    background-color: #eaeaea;
+    box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
+    color: #323232;
+}
+
 /*|||||| стили для страницы каталога icecream-catalog ||||||*/
 
 
@@ -1312,8 +1327,6 @@ li.favorite::before {
     background-color: rgba(255, 255, 255, 0.2);
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
-
-
 
 .icecream-catalog-item img{
     border-radius: 50%;
@@ -1395,7 +1408,7 @@ li.favorite::before {
     margin-left: 3px;
     width: 26px;
     height: 26px;
-
+    cursor: pointer;
 }
 
 .pagination-item a {
@@ -1406,11 +1419,7 @@ li.favorite::before {
 }
 
 .pagination-item:hover {
-    background-color: #ffffff;
-}
-
-.pagination-item:hover a {
-    color: #000000;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .pagination-item-current {
@@ -1426,7 +1435,7 @@ li.favorite::before {
     padding: 2px 14px;
 }
 
-.pagination-item-back path {
+.pagination-item-back-disabled path {
     fill: rgba(255, 255, 255, 0.2);
 }
 
@@ -1450,7 +1459,7 @@ li.favorite::before {
 /* стили для модолок войти */
 
 .modal-login {
-    display: ;
+    display: none;
     top: 59px;
     left: 52%;
     width: 277px;
@@ -1558,4 +1567,84 @@ li.favorite::before {
 .search-form input:focus {
     border: 2px solid #8fbdec;
     outline: none;
+}
+
+/* стили для модолок Обратная связь */
+
+.modal-write-us {
+    display: none;
+    top: 90px;
+    left: 50%;
+    width: 477px;
+    background-color: #f8f7f4;
+    border-radius: 6px;
+    margin-left: -238px;
+}
+
+.write-us-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-write-us h2 {
+    margin: 0;
+    padding: 16px 24px 19px 24px;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+.write-us-form input {
+    margin-left: 25px;
+    margin-right: 185px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    padding-left: 13px;
+    padding-right: 13px;
+    border: 1px solid #d3d3d2;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.write-us-form textarea {
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-top: 8px;
+    padding-bottom: 25px;
+    padding-left: 13px;
+    padding-right: 13px;
+    border: 1px solid #d3d3d2;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.write-us-form input::-webkit-input-placeholder,
+.write-us-form textarea::-webkit-input-placeholder {
+    color: #999999;
+}
+
+.write-us-form a {
+    margin-left: 316px;
+    margin-right: 24px;
+    padding-left: 23px;
+    padding-right: 13px;
+    margin-bottom: 27px;
+    margin-top: 4px;
+}
+
+.modal-close {
+	position: absolute;
+	top: 14px;
+	right: 15px;
+	width: 18px;
+	height: 17px;
+	background-color: transparent;
+	background-image: url(../img/svg/cross-big.svg);
+	font-size: 0;
+	border: 0;
+	z-index: 2;
 }
