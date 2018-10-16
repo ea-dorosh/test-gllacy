@@ -149,7 +149,7 @@ img {
     color: #000000;
 }
 
-.site-navigation > li:hover .catalog-menu{
+.site-navigation > li:hover .catalog-menu {
     display: block;
 }
 
@@ -164,15 +164,29 @@ img {
     line-height: 16px;
 }
 
-.site-navigation li li a:hover {
+/*Для нужных тебе li в catalog-menu задай 1) border: 1px solid transparent 2) border-top-right-radius: 5px; и border-top-left-radius: 5px; 3) ховер поставь на li (а не на ссылку) и меняй background на тот что тебе нужно*/
+
+.site-navigation li li:first-child {
+    border: 1px solid transparent;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.site-navigation li li:last-child {
+    border: 1px solid transparent;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.site-navigation li li:hover {
     background-color: #fbded8;
 }
 
-.site-navigation li li a:active {
+.site-navigation li li:active {
     background-color: #f6b5a5;
 }
 
-.catalog-menu li:first-child {
+.site-navigation .catalog-menu li:first-child {
     font-weight: bold;
     border-bottom: 1px solid #d1d0ce;
 }
@@ -214,9 +228,12 @@ img {
     background-color: #ffffff;
 }
 
+
 .search-link:hover path {
     fill: #000000;
 }
+
+
 
 .login-link {
     display: block;
@@ -507,14 +524,42 @@ img {
     border-radius: 5px;
 }
 
+.popular-catalog-item::after {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  content: "";
+  width: 200px;
+  border-radius: 5px;
+  z-index: -1;
+  display: none;
+  min-height: 366px;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.popular-catalog-item a {
+    position: absolute;
+    display: none;
+    top: 304px;
+    right: 3px;
+    width: 194px;
+    padding-left: 14px;
+    padding-right: 10px;
+    margin-left: 3px;
+    z-index: 1;
+}
+
 .popular-catalog-item:hover a {
     display: block;
 }
 
+.popular-catalog-item:hover::after {
+  display: block;
+}
+
 .popular-catalog-item:hover {
-    min-height: 366px;
-    background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
 .flag-hit {
@@ -1318,14 +1363,42 @@ li.favorite::before {
     border-radius: 5px;
 }
 
-.icecream-catalog-item:hover a {
-    display: block;
+.icecream-catalog-item::after {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  content: "";
+  width: 200px;
+  border-radius: 5px;
+  z-index: -1;
+  display: none;
+  min-height: 366px;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.icecream-catalog-item a {
+    position: absolute;
+    display: none;
+    top: 304px;
+    right: 3px;
+    width: 194px;
+    padding-left: 14px;
+    padding-right: 10px;
+    margin-left: 3px;
+    z-index: 1;
+}
+
+.icecream-catalog-item:hover::after {
+  display: block;
 }
 
 .icecream-catalog-item:hover {
-    min-height: 366px;
-    background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.icecream-catalog-item:hover a.btn-small {
+    display: block;
 }
 
 .icecream-catalog-item img{
@@ -1381,14 +1454,6 @@ li.favorite::before {
     margin-top: 7px;
     text-align: center;
     min-height: 88px;
-}
-
-.icecream-catalog-item a {
-    display: none;
-    width: 194px;
-    padding-left: 14px;
-    padding-right: 10px;
-    margin-left: 3px;
 }
 
 /*|||||| стили для страницы каталога pagination |||||*/
@@ -1527,7 +1592,7 @@ li.favorite::before {
     color: #ffbc9e;
 }
 
-/* стили для модолок войти */
+/* стили для модолок поиск */
 
 .modal-search {
     display: none;
