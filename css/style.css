@@ -164,8 +164,6 @@ img {
     line-height: 16px;
 }
 
-/*Для нужных тебе li в catalog-menu задай 1) border: 1px solid transparent 2) border-top-right-radius: 5px; и border-top-left-radius: 5px; 3) ховер поставь на li (а не на ссылку) и меняй background на тот что тебе нужно*/
-
 .site-navigation li li:first-child {
     border: 1px solid transparent;
     border-top-right-radius: 5px;
@@ -1156,6 +1154,16 @@ li.favorite::before {
     line-height: 18px;
     padding: 9px 14px;
     border: none;
+}
+
+.catalog-form-item select::after {
+    position: absolute;
+    content: "";
+    top: 0px;
+    right: 0px;
+    background-image: url(../img/svg/icon-down-dir.svg);
+    width: 11px;
+    height: 11px;
 }
 
 .catalog-form-item select:hover {
